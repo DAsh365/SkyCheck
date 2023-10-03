@@ -9,38 +9,37 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>SkyCheck</title>
 </head>
-<header>SkyCheck</header>
-<div id="price-container">
-        <h1>Price List</h1>
-        <!--Placeholder list and list items, can change for dynamic HTML later on :-)-->
-        <ol>
-        <li>$1.00</li>
-        <li>$2.00</li>
-        <li>$3.00</li>
-        <li>$4.00</li>
-        <li>$5.00</li>
-        <li>$6.00</li>
-        </ol>
+<header class="bg-blue-500 text-white p-4">SkyCheck</header>
+
+<div id="input-Container">
+    <input class="inputField" type="text" id="cityInput" name="City" placeholder="Enter a city...">
+    <button class="inputField" type="button">Search</button>
 </div>
-<div id="flightOverview-container">
-    <ol>
+
+<div id="price-container" class="p-4">
+    <h1 class="text-xl font-semibold">Price List</h1>
+    <ul class="list-disc pl-4">
+        <!-- Dynamic flight price list goes here -->
+    </ul>
+</div>
+<div id="flightOverview-container" class="p-4">
+    <ul>
         <li>Flight</li>
-        <li>To</li>
         <li>Depart:</li>
         <li>Arrive:</li>
         <li>Stops:</li>
         <li>Travel time:</li>
-    </ol>
+    </ul>
 </div>
-<div id="weather-container">
-    <ol>
+<div id="weather-container" class="p-4">
+    <ul>
         <li>Day:</li>
         <li>Current temperature:</li>
         <li>High:</li>
         <li>Low:</li>
         <li>Wind:</li>
         <li>Precipitation:</li>
-    </ol>
+    </ul>
 </div>
 <body>
 <script src="./assets/js/script.js"></script>
