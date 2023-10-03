@@ -6,6 +6,9 @@ color: darkblue;
     background-color: white;
     border: solid  1px black;
 }
+li {
+    list-style: none;
+}
 .box {
 height: 1100px;
 width: 1000px;
