@@ -37,3 +37,29 @@ align-items: center;
 justify-content: center;
 font-size: 50px;
 }
+#searchBtn {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 10px;
+    background-color: white;
+}
+#searchBtn:hover {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 10px;
+    background-color: rgb(59 130 246);
+    color: white;
+}
+#input-Container {
+    justify-content: center;
+    align-items: baseline;
+    margin: 5px;
+    display: inline-flex;
+}
+.inputField {
+    margin: 5px;
+}
