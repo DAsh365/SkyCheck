@@ -2,8 +2,7 @@
 
 ## Description
 
-SkyCheck is a website that helps you find and book flights, providing real-time weather updates for your travel destination.
-Motivation for development: The ability to find a cheap flight easily and get weather information for the destination while doing so.
+SkyCheck is a website that helps you find and book flights, providing real-time weather updates for your travel destination. Motivation for development: The ability to find a cheap flight easily and get weather information for the destination while doing so.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -13,7 +12,7 @@ Motivation for development: The ability to find a cheap flight easily and get we
 
 ## Installation
 
-No instilation Needed
+No installation needed.
 
 ## Usage
 
@@ -23,18 +22,18 @@ SkyCheck simplifies the flight booking process. To find and book flights, enter 
 
 ## Credits
 Collaborators:
-Devan Ash: https://github.com/DAsh365
-Jared Paden: https://github.com/J-T-Paden
-Colby Sholes: https://github.com/Cole-Black-Mane
-Samuel De La Cruz: https://github.com/platano91
+Devan Ash: [GitHub](https://github.com/DAsh365)
+Jared Paden: [GitHub](https://github.com/J-T-Paden)
+Colby Sholes: [GitHub](https://github.com/Cole-Black-Mane)
+Samuel De La Cruz: [GitHub](https://github.com/platano91)
 
-API's:
-Flight API: https://rapidapi.com/DataCrawler/api/tripadvisor16/pricing
-Weather API: https://rapidapi.com/darkskyapis/api/dark-sky
+APIs:
+Flight API: [TripAdvisor API](https://rapidapi.com/DataCrawler/api/tripadvisor16)
+Weather API: [Dark Sky API](https://rapidapi.com/darkskyapis/api/dark-sky)
 
-CSS Framework: https://tailwindcss.com/
+CSS Framework: [Tailwind CSS](https://tailwindcss.com/)
 
-Wireframe: https://www.figma.com/
+Wireframe: [Figma](https://www.figma.com/)
 
 ## License
 
