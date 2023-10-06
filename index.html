@@ -1,71 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/reset.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
     <!-- Tailwind CSS link-->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/datepicker.min.js"></script>
     <title>SkyCheck</title>
-</head>
-<header id="header" class="bg-blue-500 text-white p-4">SkyCheck</header>
+  </head>
+  <header id="header" class="bg-blue-500 text-white p-4">SkyCheck</header>
 
-<div id="input-Container">
-    <input class="inputField flex items-center" type="text" id="departureInput" name="City" placeholder="Enter a departing city...">
-    <input class="inputField flex items-center" type="text" id="arrivalInput" name="City" placeholder="Enter an arriving city...">
+  <div id="input-Container">
+
+<select name="Departing city:" id="departureInput">
+    <option value="">Departing city</option>
+    <option value= 'MGM'>Montgomery, Alabama</option>
+    <option value= 'JNU'>Juneau, Alaska</option>
+    <option value= 'PHX'>Phoenix, Arizona</option>
+    <option value= 'LIT'>Little Rock, Arkansas</option>
+    <option value= 'SAC'>Sacramento, California</option>
+    <option value= 'DEN'>Denver, Colorado</option>
+    <option value= 'HFD'>Hartford, Connecticut</option>
+    <option value= 'DOV'>Dover, Delaware</option>
+    <option value= 'TLH'>Tallahassee, Florida</option>
+    <option value= 'ATL'>Atlanta, Georgia</option>
+    <option value= 'HNL'>Honolulu, Hawaii</option>
+    <option value= 'BOI'>Boise, Idaho</option>
+    <option value= 'SPI'>Springfield, Illinois</option>
+    <option value= 'IND'>Indianapolis, Indiana</option>
+    <option value= 'DSM'>Des Moines, Iowa</option>
+    <option value= 'TOP'>Topeka, Kansas</option>
+    <option value= 'FFT'>Frankfort, Kentucky</option>
+    <option value= 'BTR'>Baton Rouge, Louisiana</option>
+    <option value= 'AUG'>Augusta, Maine</option>
+    <option value= 'ANN'>Annapolis, Maryland</option>
+    <option value= 'BOS'>Boston, Massachusetts</option>
+    <option value= 'LAN'>Lansing, Michigan</option>
+    <option value= 'STP'>StPaul, Minnesota</option>
+    <option value= 'JAN'>Jackson, Mississippi</option>
+    <option value= 'JEF'>Jefferson City, Missouri</option>
+    <option value= 'HLN'>Helena, Montana</option>
+    <option value= 'LNK'>Lincoln, Nebraska</option>
+    <option value= 'CSN'>Carson City, Nevada</option>
+    <option value= 'CON'>Concord, NewHampshire</option>
+    <option value= 'TRE'>Trenton, NewJersey</option>
+    <option value= 'SAF'>Santa Fe, NewMexico</option>
+    <option value= 'ALB'>Albany, NewYork</option>
+    <option value= 'RDU'>Raleigh, NorthCarolina</option>
+    <option value= 'BIS'>Bismarck, NorthDakota,</option>
+    <option value= 'CMH'>Columbus, Ohio</option>
+    <option value= 'OKC'>Oklahoma City, Oklahoma,</option>
+    <option value= 'SLE'>Salem, Oregon</option>
+    <option value= 'MDT'>Harrisburg, Pennsylvania</option>
+    <option value= 'PVD'>Providence, RhodeIsland</option>
+    <option value= 'CAE'>Columbia, SouthCarolina</option>
+    <option value= 'PIR'>Pierre, SouthDakota</option>
+    <option value= 'BNA'>Nashville, Tennessee</option>
+    <option value= 'AUS'>Austin, Texas</option>
+    <option value= 'SLC'>Salt Lake City, Utah,</option>
+    <option value= 'MPV'>Montpelier, Vermont</option>
+    <option value= 'RIC'>Richmond, Virginia</option>
+    <option value= 'OLY'>Olympia, Washington</option>
+    <option value= 'CRW'>Charleston, WestVirginia</option>
+    <option value= 'MSN'>Madison, Wisconsin</option>
+    <option value= 'CYS'>Cheyenne, Wyoming</option>
+</select>
+
+<select name="Arriving city:" id="arrivalInput">
+    <option value="">Arrival city</option>
+    <option value= 'MGM'>Montgomery, Alabama</option>
+    <option value= 'JNU'>Juneau, Alaska</option>
+    <option value= 'PHX'>Phoenix, Arizona</option>
+    <option value= 'LIT'>Little Rock, Arkansas</option>
+    <option value= 'SAC'>Sacramento, California</option>
+    <option value= 'DEN'>Denver, Colorado</option>
+    <option value= 'HFD'>Hartford, Connecticut</option>
+    <option value= 'DOV'>Dover, Delaware</option>
+    <option value= 'TLH'>Tallahassee, Florida</option>
+    <option value= 'ATL'>Atlanta, Georgia</option>
+    <option value= 'HNL'>Honolulu, Hawaii</option>
+    <option value= 'BOI'>Boise, Idaho</option>
+    <option value= 'SPI'>Springfield, Illinois</option>
+    <option value= 'IND'>Indianapolis, Indiana</option>
+    <option value= 'DSM'>Des Moines, Iowa</option>
+    <option value= 'TOP'>Topeka, Kansas</option>
+    <option value= 'FFT'>Frankfort, Kentucky</option>
+    <option value= 'BTR'>Baton Rouge, Louisiana</option>
+    <option value= 'AUG'>Augusta, Maine</option>
+    <option value= 'ANN'>Annapolis, Maryland</option>
+    <option value= 'BOS'>Boston, Massachusetts</option>
+    <option value= 'LAN'>Lansing, Michigan</option>
+    <option value= 'STP'>StPaul, Minnesota</option>
+    <option value= 'JAN'>Jackson, Mississippi</option>
+    <option value= 'JEF'>Jefferson City, Missouri</option>
+    <option value= 'HLN'>Helena, Montana</option>
+    <option value= 'LNK'>Lincoln, Nebraska</option>
+    <option value= 'CSN'>Carson City, Nevada</option>
+    <option value= 'CON'>Concord, NewHampshire</option>
+    <option value= 'TRE'>Trenton, NewJersey</option>
+    <option value= 'SAF'>Santa Fe, NewMexico</option>
+    <option value= 'ALB'>Albany, NewYork</option>
+    <option value= 'RDU'>Raleigh, NorthCarolina</option>
+    <option value= 'BIS'>Bismarck, NorthDakota,</option>
+    <option value= 'CMH'>Columbus, Ohio</option>
+    <option value= 'OKC'>Oklahoma City, Oklahoma,</option>
+    <option value= 'SLE'>Salem, Oregon</option>
+    <option value= 'MDT'>Harrisburg, Pennsylvania</option>
+    <option value= 'PVD'>Providence, RhodeIsland</option>
+    <option value= 'CAE'>Columbia, SouthCarolina</option>
+    <option value= 'PIR'>Pierre, SouthDakota</option>
+    <option value= 'BNA'>Nashville, Tennessee</option>
+    <option value= 'AUS'>Austin, Texas</option>
+    <option value= 'SLC'>Salt Lake City, Utah,</option>
+    <option value= 'MPV'>Montpelier, Vermont</option>
+    <option value= 'RIC'>Richmond, Virginia</option>
+    <option value= 'OLY'>Olympia, Washington</option>
+    <option value= 'CRW'>Charleston, WestVirginia</option>
+    <option value= 'MSN'>Madison, Wisconsin</option>
+    <option value= 'CYS'>Cheyenne, Wyoming</option>
+</select>
+
+
+<!--
+    <input
+      class="inputField flex items-center"
+      type="text"
+      id="departureInput"
+      name="City"
+      placeholder="Enter a departing city..."
+    />
+    <input
+      class="inputField flex items-center"
+      type="text"
+      id="arrivalInput"
+      name="City"
+      placeholder="Enter an arriving city..."
+    /> -->
     <div date-rangepicker class="flex items-center">
-    <div class="relative">
-      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-           <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+      <div class="relative">
+        <div
+          class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+        >
+          <svg
+            class="w-4 h-4 text-gray-500 dark:text-gray-400"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+            />
           </svg>
+        </div>
+        <input
+          name="start"
+          type="text"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Select date start"
+        />
       </div>
-      <input name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date start">
+      <span class="mx-4 text-gray-500">to</span>
+      <div class="relative">
+        <div
+          class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+        >
+          <svg
+            class="w-4 h-4 text-gray-500 dark:text-gray-400"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+            />
+          </svg>
+        </div>
+        <input
+          name="end"
+          type="text"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Select date end"
+        />
+      </div>
     </div>
-    <span class="mx-4 text-gray-500">to</span>
-    <div class="relative">
-      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-           <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-          </svg>
-      </div>
-      <input name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date end">
-  </div>
-  </div>
-  
-    <button id="searchBtn" class="inputField flex items-center" type="button">Search</button>
-</div>
-    
 
-<div id="price-container" class="p-4">
+    <button id="searchBtn" class="inputField flex items-center" type="button">
+      Search
+    </button>
+  </div>
+
+  <div id="price-container" class="p-4">
     <h1 class="text-xl font-semibold">Price List</h1>
-    <ul class="list-disc pl-4">
-        <!-- Dynamic flight price list goes here -->
-        <li>Example price $2949.09</li>
+    <ul id="priceListEL" class="list-disc pl-4">
+      <!-- Dynamic flight price list goes here -->
+      <li>Example price $2949.09</li>
     </ul>
-</div>
-<div id="flightOverview-container" class="p-4">
+  </div>
+  <div id="flightOverview-container" class="p-4">
     <ul>
-        <li>Flight</li>
-        <li>Depart:</li>
-        <li>Arrive:</li>
-        <li>Stops:</li>
-        <li>Travel time:</li>
+      <li id="flight">Flight:</li>
+      <li id="departure">Depart:</li>
+      <li id="arrival">Arrive:</li>
+      <li id="stops">Stops:</li>
+      <li id="travelTime">Travel time:</li>
     </ul>
-</div>
-<div id="weather-container" class="p-4">
+  </div>
+  <div id="weather-container" class="p-4">
     <ul>
-        <li>Day:</li>
-        <li>Current temperature:</li>
-        <li>High:</li>
-        <li>Low:</li>
-        <li>Wind:</li>
-        <li>Precipitation:</li>
+      <li>Day:</li>
+      <li>Current temperature:</li>
+      <li>High:</li>
+      <li>Low:</li>
+      <li>Wind:</li>
+      <li>Precipitation:</li>
     </ul>
-</div>
-<body>
-<script src="./assets/js/script.js"></script>
-</body>
+  </div>
+  <body>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
