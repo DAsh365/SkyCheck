@@ -1,81 +1,29 @@
+// variales for using JS to dynamically create HTML elements
 var searchBtn = document.getElementById("searchBtn");
 var priceListEL = document.getElementById("priceListEl");
-var firstPrice = document.createElement("li");
+var firstPrice = document.getElementById("price1")
 var flight = document.getElementById("flight");
 var depart = document.getElementById("departure");
 var arrival = document.getElementById("arrival");
 var layover = document.getElementById("stops");
 var totalTime = document.getElementById("travelTime");
-var requestedDeparture = document.getElementById('departureInput').value.trim()
-var requestedArrival = document.getElementById('arrivalInput').value.trim()
+var requestedDeparture = document.getElementById('departureInput')
+var requestedArrival = document.getElementById('arrivalInput')
 
-
-var capitals = {
-Montgomery, Alabama: 'MGM',
-Juneau, Alaska: 'JNU',
-Phoenix, Arizona: 'PHX',
-LittleRock, Arkansas: 'LIT',
-Sacramento, California: 'SAC',
-Denver, Colorado: 'DEN',
-Hartford, Connecticut: 'HFD',
-Dover, Delaware: 'DOV',
-Tallahassee, Florida: 'TLH',
-Atlanta, Georgia: 'ATL',
-Honolulu, Hawaii: 'HNL',
-Boise, Idaho: 'BOI',
-Springfield, Illinois: 'SPI',
-Indianapolis, Indiana: 'IND',
-DesMoines, Iowa: 'DSM',
-Topeka, Kansas: 'TOP',
-Frankfort, Kentucky: 'FFT',
-BatonRouge, Louisiana: 'BTR',
-Augusta, Maine: 'AUG',
-Annapolis, Maryland: 'ANN',
-Boston, Massachusetts: 'BOS',
-Lansing, Michigan: 'LAN',
-StPaul, Minnesota: 'STP',
-Jackson, Mississippi: 'JAN',
-JeffersonCity, Missouri: 'JEF',
-Helena, Montana: 'HLN',
-Lincoln, Nebraska: 'LNK',
-CarsonCity, Nevada: 'CSN',
-Concord, NewHampshire: 'CON',
-Trenton, NewJersey: 'TRE',
-SantaFe, NewMexico: 'SAF',
-Albany, NewYork: 'ALB',
-Raleigh, NorthCarolina: 'RDU',
-Bismarck, NorthDakota: 'BIS',
-Columbus, Ohio: 'CMH',
-OklahomaCity, Oklahoma: 'OKC',
-Salem, Oregon: 'SLE',
-Harrisburg, Pennsylvania: 'MDT',
-Providence, RhodeIsland: 'PVD',
-Columbia, SouthCarolina: 'CAE',
-Pierre, SouthDakota: 'PIR',
-Nashville, Tennessee: 'BNA',
-Austin, Texas: 'AUS',
-SaltLakeCity, Utah: 'SLC',
-Montpelier, Vermont: 'MPV',
-Richmond, Virginia: 'RIC',
-Olympia, Washington: 'OLY',
-Charleston, WestVirginia: 'CRW',
-Madison, Wisconsin: 'MSN',
-Cheyenne, Wyoming: 'CYS'
-}
 // Uses the search button (from HTML id 'searchBtn') to start a function
 function search(event) {
+event.preventDefault();
+// gets the data from options value in HTML and stores it in a variable
+var departCities = requestedDeparture.options[requestedDeparture.selectedIndex]
+var arriveCities = requestedArrival.options[requestedArrival.selectedIndex]
+// creates a new variable for the value of each options in HTML
+var departCitiesValue = departCities.value
+var arriveCitiesValue = arriveCities.value
   console.log("Button was clicked!");
-  event.preventDefault();
-  firstPrice.appendChild(price);
-  flight.append(flightNumber);
-  depart.append(departAirport);
-  arrival.append(arriveAirport);
-  layover.append(stops);
-}
+  console.log(departCitiesValue, arriveCitiesValue);
 
-searchBtn.addEventListener("click", search);
 
-//const url = 'https://tripadvisor16.p.rapidapi.com/api/v1/flights/searchFlights?sourceAirportCode=DEN&destinationAirportCode=AUS&date=2023-10-05&itineraryType=ONE_WAY&sortOrder=PRICE&numAdults=1&numSeniors=0&classOfService=ECONOMY&returnDate=2023-10-11&pageNumber=1&currencyCode=USD';
+// const url = 'https://tripadvisor16.p.rapidapi.com/api/v1/flights/searchFlights?sourceAirportCode='+departCitiesValue+'&destinationAirportCode='+arriveCitiesValue+'&date=2023-10-06&itineraryType=ONE_WAY&sortOrder=PRICE&numAdults=1&numSeniors=0&classOfService=ECONOMY&returnDate=2023-10-11&pageNumber=1&currencyCode=USD';
 const options = {
 method: "GET",
  headers: {
@@ -95,7 +43,8 @@ fetch(url, options)
   .catch(function (error) {
     console.log(error);
   });
-
+}
+// parses through API for specific data to be used
 function getData(results) {
   var price = results.data.flights[0].purchaseLinks[0].totalPrice;
 
@@ -116,8 +65,15 @@ function getData(results) {
     results.data.flights[0].segments[0].legs[0].departureDateTime;
 
   var arrivalTime = results.data.flights[0].segments[0].legs[0].arrivalDateTime;
+// renders each bit of data from API to HTML
+  firstPrice.append(price);
+  flight.append(flightNumber);
+  depart.append(departAirport);
+  arrival.append(arriveAirport);
+  layover.append(stops);
 
   console.log(
     `Price: ${price} \n Stops: ${stops} \n Departure: ${departAirport} \n Arrival: ${arriveAirport} \n Flight Number: ${flightNumber} \n Carrier: ${carrier} \n Departure Time: ${departTime} \n Arrival Time ${arrivalTime}`
   );
 }
+searchBtn.addEventListener("click", search);
