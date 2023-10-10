@@ -44,26 +44,26 @@
     <option value='HLN'>Helena, Montana</option>
     <option value='LNK'>Lincoln, Nebraska</option>
     <option value='CSN'>Carson City, Nevada</option>
-    <option value='CON'>Concord, NewHampshire</option>
-    <option value='TRE'>Trenton, NewJersey</option>
-    <option value='SAF'>Santa Fe, NewMexico</option>
-    <option value='ALB'>Albany, NewYork</option>
-    <option value='RDU'>Raleigh, NorthCarolina</option>
-    <option value='BIS'>Bismarck, NorthDakota,</option>
+    <option value='CON'>Concord, New Hampshire</option>
+    <option value='TRE'>Trenton, New Jersey</option>
+    <option value='SAF'>Santa Fe, New Mexico</option>
+    <option value='ALB'>Albany, New York</option>
+    <option value='RDU'>Raleigh, North Carolina</option>
+    <option value='BIS'>Bismarck, North Dakota</option>
     <option value='CMH'>Columbus, Ohio</option>
-    <option value='OKC'>Oklahoma City, Oklahoma,</option>
+    <option value='OKC'>Oklahoma City, Oklahoma</option>
     <option value='SLE'>Salem, Oregon</option>
     <option value='MDT'>Harrisburg, Pennsylvania</option>
-    <option value='PVD'>Providence, RhodeIsland</option>
-    <option value='CAE'>Columbia, SouthCarolina</option>
-    <option value='PIR'>Pierre, SouthDakota</option>
+    <option value='PVD'>Providence, Rhode Island</option>
+    <option value='CAE'>Columbia, South Carolina</option>
+    <option value='PIR'>Pierre, South Dakota</option>
     <option value='BNA'>Nashville, Tennessee</option>
     <option value='AUS'>Austin, Texas</option>
-    <option value='SLC'>Salt Lake City, Utah,</option>
+    <option value='SLC'>Salt Lake City, Utah</option>
     <option value='MPV'>Montpelier, Vermont</option>
     <option value='RIC'>Richmond, Virginia</option>
     <option value='OLY'>Olympia, Washington</option>
-    <option value='CRW'>Charleston, WestVirginia</option>
+    <option value='CRW'>Charleston, West Virginia</option>
     <option value='MSN'>Madison, Wisconsin</option>
     <option value='CYS'>Cheyenne, Wyoming</option>
 </select>
@@ -140,6 +140,7 @@
           </svg>
         </div>
         <input
+          id="startDate"
           name="start"
           type="text"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -164,6 +165,7 @@
           </svg>
         </div>
         <input
+          id="endDate"
           name="end"
           type="text"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -178,7 +180,7 @@
   </div>
 
   <div id="price-container" class="p-4">
-    <h1 class="text-xl font-semibold">Price List</h1>
+    <h1 class="text-xl font-semibold">Lowest ticket price:</h1>
     <ul id="priceListEL" class="list-disc pl-4">
       <!-- Dynamic flight price list goes here -->
       <li id="price1">$</li>
@@ -187,10 +189,10 @@
   <div id="flightOverview-container" class="p-4">
     <ul>
       <li id="flight">Flight:</li>
+      <li id="carrier">Carrier:</li>
       <li id="departure">Depart:</li>
       <li id="arrival">Arrive:</li>
-      <li id="stops">Stops:</li>
-      <li id="travelTime">Travel time:</li>
+      <!--<li id="travelTime">Travel time:</li>-->
     </ul>
   </div>
   <div id="weather-container" class="p-4">
@@ -205,5 +207,6 @@
   </div>
   <body>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/Geo.js"></script>
   </body>
 </html>
