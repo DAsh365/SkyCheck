@@ -29,7 +29,7 @@ Samuel De La Cruz: [GitHub](https://github.com/platano91)
 
 APIs:
 Flight API: [TripAdvisor API](https://rapidapi.com/DataCrawler/api/tripadvisor16)
-Weather API: [Dark Sky API](https://rapidapi.com/darkskyapis/api/dark-sky)
+Weather API: [OpenWeather API](https://openweathermap.org)
 
 CSS Framework: [Tailwind CSS](https://tailwindcss.com/)
 
