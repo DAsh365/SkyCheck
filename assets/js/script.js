@@ -11,8 +11,8 @@ var requestedDeparture = document.getElementById('departureInput');
 var requestedArrival = document.getElementById('arrivalInput');
 var startDate = document.getElementById('startDate')
 var endDate = document.getElementById('endDate')
-var departDate = startDate.textContent
-var arrivalDate = endDate.textContent
+var startDateValue = startDate.textContent.valueOf(startDate)
+var endDateValue = endDate.textContent.valueOf(endDate)
 
 // Uses the search button (from HTML id 'searchBtn') to start a function
 function search(event) {
@@ -25,7 +25,7 @@ var departCitiesValue = departCities.value
 var arriveCitiesValue = arriveCities.value
   console.log("Button was clicked!");
   console.log(departCitiesValue, arriveCitiesValue)
-  console.log(departDate, arrivalDate);
+  console.log(startDateValue, endDateValue);
 
 
  // const url = 'https://tripadvisor16.p.rapidapi.com/api/v1/flights/searchFlights?sourceAirportCode='+departCitiesValue+'&destinationAirportCode='+arriveCitiesValue+'&date=2023-10-10&itineraryType=ONE_WAY&sortOrder=PRICE&numAdults=1&numSeniors=0&classOfService=ECONOMY&returnDate=2023-10-15&pageNumber=1&currencyCode=USD';
