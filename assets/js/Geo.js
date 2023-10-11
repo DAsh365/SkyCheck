@@ -1,4 +1,6 @@
 var currentTemp = document.getElementById("temp")
+var highTemp = document.getElementById("high")
+var lowTemp = document.getElementById("low")
 var searchBtn = document.getElementById("searchBtn");
 
 function getWeather(event){
@@ -55,7 +57,7 @@ function getWeather(event){
 {city: 'CYS', lat: 41.1399, lon: -104.8202}
     ]
     event.preventDefault()
-var weatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=eeac7ee1a675ee906741eb0c85a9d7e8"
+var weatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=40.7608&lon=-111.8910&appid=eeac7ee1a675ee906741eb0c85a9d7e8"
 fetch(weatherUrl)
     .then(function (response){
         return response.json()
@@ -70,9 +72,15 @@ fetch(weatherUrl)
     })
 }
 function convertor(temp){
-    var kelvin = temp.main.temp
-    var temperature = (kelvin - 273.15) * 9 / 5 + 32;
+    var currentKelvin = temp.main.temp
+    var highKelvin = temp.main.temp_max
+    var lowKelvin = temp.main.temp_min
+    var temperature = (currentKelvin - 273.15) * 9 / 5 + 32;
+    var maxTemp = (highKelvin - 273.15) * 9 / 5 + 32;
+    var minTemp = (lowKelvin - 273.15) * 9 / 5 + 32;
     console.log(temperature.toFixed(2))
     currentTemp.append(temperature.toFixed(2) + '°F')
+    highTemp.append(maxTemp.toFixed(2) + '°F')
+    lowTemp.append(minTemp.toFixed(2) + '°F')
 }
 searchBtn.addEventListener("click", getWeather);

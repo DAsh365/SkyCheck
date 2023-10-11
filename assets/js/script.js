@@ -34,8 +34,7 @@ var endDateVal = endDate.value
   console.log(startDateVal, endDateVal);
 
 //need to convert startDate and endDate val to YYYY-MM-DD
-  const url = 'https://tripadvisor16.p.rapidapi.com/api/v1/flights/searchFlights?sourceAirportCode='+departCitiesValue+'&destinationAirportCode='+arriveCitiesValue+'&date='+convertDate(startDateVal)+'&itineraryType=ONE_WAY&sortOrder=PRICE&numAdults=1&numSeniors=0&classOfService=ECONOMY&returnDate='+convertDate(endDateVal)+'&pageNumber=1&currencyCode=USD';
-//const url = `https://tripadvisor16.p.rapidapi.com/api/v1/flights/searchFlights?sourceAirportCode=${departCitiesValue}`
+ const url = 'https://tripadvisor16.p.rapidapi.com/api/v1/flights/searchFlights?sourceAirportCode='+departCitiesValue+'&destinationAirportCode='+arriveCitiesValue+'&date='+convertDate(startDateVal)+'&itineraryType=ONE_WAY&sortOrder=PRICE&numAdults=1&numSeniors=0&classOfService=ECONOMY&returnDate='+convertDate(endDateVal)+'&pageNumber=1&currencyCode=USD';
  const options = {
 method: "GET",
  headers: {
