@@ -13,7 +13,10 @@ var startDate = document.getElementById('startDate')
 var endDate = document.getElementById('endDate')
 var startDateValue = startDate.textContent.valueOf(startDate)
 var endDateValue = endDate.textContent.valueOf(endDate)
-
+function convertDate(dateStr){
+    var splitDateStr = dateStr.split('/')
+    return `${splitDateStr[2]}-${splitDateStr[0]}-${splitDateStr[1]}`
+}
 // Uses the search button (from HTML id 'searchBtn') to start a function
 function search(event) {
 event.preventDefault();
@@ -23,22 +26,27 @@ var arriveCities = requestedArrival.options[requestedArrival.selectedIndex]
 // creates a new variable for the value of each options in HTML
 var departCitiesValue = departCities.value
 var arriveCitiesValue = arriveCities.value
+var startDateVal = startDate.value
+var endDateVal = endDate.value
   console.log("Button was clicked!");
+  console.log(convertDate(startDateVal))
   console.log(departCitiesValue, arriveCitiesValue)
-  console.log(startDateValue, endDateValue);
+  console.log(startDateVal, endDateVal);
 
-
- // const url = 'https://tripadvisor16.p.rapidapi.com/api/v1/flights/searchFlights?sourceAirportCode='+departCitiesValue+'&destinationAirportCode='+arriveCitiesValue+'&date=2023-10-10&itineraryType=ONE_WAY&sortOrder=PRICE&numAdults=1&numSeniors=0&classOfService=ECONOMY&returnDate=2023-10-15&pageNumber=1&currencyCode=USD';
-const options = {
+//need to convert startDate and endDate val to YYYY-MM-DD
+  const url = 'https://tripadvisor16.p.rapidapi.com/api/v1/flights/searchFlights?sourceAirportCode='+departCitiesValue+'&destinationAirportCode='+arriveCitiesValue+'&date='+convertDate(startDateVal)+'&itineraryType=ONE_WAY&sortOrder=PRICE&numAdults=1&numSeniors=0&classOfService=ECONOMY&returnDate='+convertDate(endDateVal)+'&pageNumber=1&currencyCode=USD';
+//const url = `https://tripadvisor16.p.rapidapi.com/api/v1/flights/searchFlights?sourceAirportCode=${departCitiesValue}`
+ const options = {
 method: "GET",
  headers: {
     "X-RapidAPI-Key": "32f2355e22msh06cc94cd6adf337p1b96abjsnb61d184ee648",
     "X-RapidAPI-Host": "tripadvisor16.p.rapidapi.com",
   },
 };
-
+console.log(url)
 fetch(url, options)
   .then(function (res) {
+    console.log(res)
     return res.json();
   })
   .then(function (data) {
