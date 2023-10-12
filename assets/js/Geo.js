@@ -67,7 +67,7 @@ arrivalLat = citiesLatLong[i].lat
 arrivalLon = citiesLatLong[i].lon
 }
     }
-var weatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat="+32.3668+"&lon="+-86.2999+"&appid=eeac7ee1a675ee906741eb0c85a9d7e8"
+var weatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat="+arrivalLat+"&lon="+arrivalLon+"&appid=eeac7ee1a675ee906741eb0c85a9d7e8"
 fetch(weatherUrl)
     .then(function (response){
         return response.json()
