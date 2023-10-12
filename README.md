@@ -18,6 +18,7 @@ No installation needed.
 
 ![alt text](./assets/Images/Screenshot%202023-10-05%202113002.png)
 
+Website: [SkyCheck](https://dash365.github.io/SkyCheck/)
 SkyCheck simplifies the flight booking process. To find and book flights, enter your destination, select your departure date, and specify the number of passengers. After clicking "Search," you'll see available flights and real-time weather information for your destination, making travel planning efficient and informative. Explore additional features and menu options for an enhanced booking experience.
 
 ## Credits
