@@ -59,8 +59,8 @@ function getWeather(event){
 {city: 'CYS', lat: 41.1399, lon: -104.8202}
     ]
     event.preventDefault()
-    console.log(arrivalCity.value)
-    console.log(arrivalLat, arrivalLon)
+  //  console.log(arrivalCity.value)
+  //  console.log(arrivalLat, arrivalLon)
     for (i=0; i<citiesLatLong.length; i++) {
 if (citiesLatLong[i].city==arrivalCity) {
 arrivalLat = citiesLatLong[i].lat
@@ -88,7 +88,7 @@ function convertor(temp){
     var temperature = (currentKelvin - 273.15) * 9 / 5 + 32;
     var maxTemp = (highKelvin - 273.15) * 9 / 5 + 32;
     var minTemp = (lowKelvin - 273.15) * 9 / 5 + 32;
-    console.log(temperature.toFixed(2))
+   //  console.log(temperature.toFixed(2))
     currentTemp.append(temperature.toFixed(2) + '°F')
     highTemp.append(maxTemp.toFixed(2) + '°F')
     lowTemp.append(minTemp.toFixed(2) + '°F')

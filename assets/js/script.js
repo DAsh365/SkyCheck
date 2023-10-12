@@ -28,10 +28,10 @@ var departCitiesValue = departCities.value
 var arriveCitiesValue = arriveCities.value
 var startDateVal = startDate.value
 var endDateVal = endDate.value
-  console.log("Button was clicked!");
-  console.log(convertDate(startDateVal))
-  console.log(departCitiesValue, arriveCitiesValue)
-  console.log(startDateVal, endDateVal);
+// console.log("Button was clicked!");
+//console.log(convertDate(startDateVal))
+//console.log(departCitiesValue, arriveCitiesValue)
+//console.log(startDateVal, endDateVal);
 
 //need to convert startDate and endDate val to YYYY-MM-DD
  const url = 'https://tripadvisor16.p.rapidapi.com/api/v1/flights/searchFlights?sourceAirportCode='+departCitiesValue+'&destinationAirportCode='+arriveCitiesValue+'&date='+convertDate(startDateVal)+'&itineraryType=ONE_WAY&sortOrder=PRICE&numAdults=1&numSeniors=0&classOfService=ECONOMY&returnDate='+convertDate(endDateVal)+'&pageNumber=1&currencyCode=USD';
@@ -186,8 +186,8 @@ if (departCitiesValue = cityNames.acronym) {
   arrival.append(arriveAirport);
   carrierID.append(carrier);
 
-  console.log(
-    `Price: ${price} \n Stops: ${stops} \n Departure: ${departAirport} \n Arrival: ${arriveAirport} \n Flight Number: ${flightNumber} \n Carrier: ${carrier} \n Departure Time: ${departTime} \n Arrival Time ${arrivalTime}`
-  );
+  // console.log(
+   // `Price: ${price} \n Stops: ${stops} \n Departure: ${departAirport} \n Arrival: ${arriveAirport} \n Flight Number: ${flightNumber} \n Carrier: ${carrier} \n Departure Time: ${departTime} \n Arrival Time ${arrivalTime}`
+ // );
 }
 searchBtn.addEventListener("click", search);
