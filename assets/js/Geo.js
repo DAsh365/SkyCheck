@@ -2,8 +2,10 @@ var currentTemp = document.getElementById("temp")
 var highTemp = document.getElementById("high")
 var lowTemp = document.getElementById("low")
 var searchBtn = document.getElementById("searchBtn");
-
+var arrivalLat
+var arrivalLon
 function getWeather(event){
+    var arrivalCity = document.querySelector('#arrivalInput').value;
     var citiesLatLong = [
 {city: 'MGM', lat: 32.3668, lon: -86.2999},
 {city: 'JNU', lat: 58.3019, lon: -134.4197},
@@ -57,7 +59,15 @@ function getWeather(event){
 {city: 'CYS', lat: 41.1399, lon: -104.8202}
     ]
     event.preventDefault()
-var weatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=40.7608&lon=-111.8910&appid=eeac7ee1a675ee906741eb0c85a9d7e8"
+    console.log(arrivalCity.value)
+    console.log(arrivalLat, arrivalLon)
+    for (i=0; i<citiesLatLong.length; i++) {
+if (citiesLatLong[i].city==arrivalCity) {
+arrivalLat = citiesLatLong[i].lat
+arrivalLon = citiesLatLong[i].lon
+}
+    }
+var weatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat="+arrivalLat+"&lon="+arrivalLon+"&appid=eeac7ee1a675ee906741eb0c85a9d7e8"
 fetch(weatherUrl)
     .then(function (response){
         return response.json()

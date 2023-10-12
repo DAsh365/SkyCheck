@@ -38,7 +38,7 @@ var endDateVal = endDate.value
  const options = {
 method: "GET",
  headers: {
-    "X-RapidAPI-Key": "32f2355e22msh06cc94cd6adf337p1b96abjsnb61d184ee648",
+    "X-RapidAPI-Key": "4a7c629552msh892e823be07a36dp17eb0bjsne09b5fee98d5",
     "X-RapidAPI-Host": "tripadvisor16.p.rapidapi.com",
   },
 };
